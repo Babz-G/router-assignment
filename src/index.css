@@ -1,3 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Boldonse&display=swap");
+
+html,
+body,
+#root {
+  height: 100%;
+}
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+:root {
+  --white: #ffffff;
+  --gray: #f8f9fa;
+  --purple: #764ba2;
+  --ltBlue: ##b8c5d6;
+  --blue: #667eea;
+  --drkBlue: #rgba(102, 126, 234, 0.3);
+  --navy: #rgba(0, 0, 0, 0.3);
+  --black: #000000;
+  --font: "Boldonse", system-ui;
+}
 * {
   margin: 0;
   padding: 0;
@@ -5,12 +32,13 @@
 }
 
 body {
-  font-family: "Inter", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: var(--font);
+  font-size: 0.5rem;
   font-weight: 400;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, var(--blue) 0%, var(--purple) 100%);
   min-height: 100vh;
   margin: 0;
-  color: #f8f9fa;
+  color: var(--gray);
 }
 
 #root {
@@ -34,8 +62,8 @@ nav {
   position: fixed;
   left: 0;
   top: 0;
-  box-shadow: 4px 0 20px rgba(0, 0, 0, 0.3);
-  border-right: 2px solid rgba(102, 126, 234, 0.3);
+  box-shadow: 4px 0 20px var(--navy);
+  border-right: 2px solid var(--drkBlue);
 }
 
 nav ul {
@@ -52,7 +80,7 @@ nav li {
 
 nav a {
   text-decoration: none;
-  color: #b8c5d6;
+  color: var(--ltBlue);
   font-weight: 600;
   font-size: 1.2rem;
   transition: all 0.3s ease;
@@ -70,14 +98,14 @@ nav a::before {
   top: 0;
   height: 100%;
   width: 4px;
-  background: linear-gradient(180deg, #667eea, #764ba2);
+  background: linear-gradient(180deg, var(--blue), var(--purple));
   transform: scaleY(0);
   transition: transform 0.3s ease;
 }
 
 nav a:hover {
-  color: #ffffff;
-  background: rgba(102, 126, 234, 0.2);
+  color: var(--white);
+  background: var(--drkBlue);
   transform: translateX(8px);
 }
 
@@ -99,11 +127,11 @@ main {
 h1 {
   margin: 0;
   padding: 0;
-  color: #ffffff;
-  font-size: 3.5rem;
+  color: var(--white);
+  font-size: 0.9rem;
   font-weight: 700;
-  text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.3);
-  letter-spacing: -1px;
+  text-shadow: 2px 2px 20px var(--black);
+  letter-spacing: 0.7px;
   line-height: 1.2;
 }
 
